@@ -12,7 +12,7 @@ define([
             constructor: function(options){
                 options = options || {};
 
-                this.printService = options.printService || "http://sampleserver6.arcgisonline.com/arcgis/rest/services/Utilities/PrintingTools/GPServer/Export%20Web%20Map%20Task"; // default seat geek range is 30mi
+                this.printService = options.printService || "https://sampleserver6.arcgisonline.com/arcgis/rest/services/Utilities/PrintingTools/GPServer/Export%20Web%20Map%20Task"; // default seat geek range is 30mi
 
                 esriConfig.defaults.io.corsEnabledServers.push("sampleserver6.arcgisonline.com");
 
@@ -139,25 +139,25 @@ define([
             getBasemapService: function(options){
                 switch(options.basemap){
                     case 'satellite':
-                        return "http://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer";
+                        return "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer";
                     case 'topo':
-                        return "http://server.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer";
+                        return "https://server.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer";
                     case 'light-gray':
-                        return "http://services.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Reference/MapServer";
+                        return "https://services.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Reference/MapServer";
                     case 'dark-gray':
-                        return "http://services.arcgisonline.com/arcgis/rest/services/Canvas/World_Dark_Gray_Base/MapServer";
+                        return "https://services.arcgisonline.com/arcgis/rest/services/Canvas/World_Dark_Gray_Base/MapServer";
                     case 'streets':
-                        return "http://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer";
+                        return "https://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer";
                     case 'hybrid':
-                        return "http://services.arcgisonline.com/ArcGIS/rest/services/Reference/World_Boundaries_and_Places/MapServer";
+                        return "https://services.arcgisonline.com/ArcGIS/rest/services/Reference/World_Boundaries_and_Places/MapServer";
                     case 'oceans':
-                        return "http://server.arcgisonline.com/arcgis/rest/services/Ocean/World_Ocean_Reference/MapServer";
+                        return "https://server.arcgisonline.com/arcgis/rest/services/Ocean/World_Ocean_Reference/MapServer";
                     case 'national-geographic':
-                        return "http://server.arcgisonline.com/ArcGIS/rest/services/NatGeo_World_Map/MapServer";
+                        return "https://server.arcgisonline.com/ArcGIS/rest/services/NatGeo_World_Map/MapServer";
                     case 'osm':
-                        return "http://a.tile.openstreetmap.org/";
+                        return "https://a.tile.openstreetmap.org/";
                     default:
-                        return "http://server.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer";
+                        return "https://server.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer";
                 }
             },
 
@@ -185,7 +185,7 @@ define([
                             "id": "Ocean",
                             "title": "Ocean",
                             "opacity": 1,
-                            "url": "http://services.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer"
+                            "url": "https://services.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer"
                         }
                     ],
                     "exportOptions": {
